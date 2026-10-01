@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nitesh Rawal — Java Backend Engineer</title>
-<meta name="description" content="Nitesh Rawal — Java backend engineer in Hyderabad building Spring Boot microservices, event-driven systems and the DevOps pipelines that run them.">
+<title>Nitesh Rawal — Software Engineer II</title>
+<meta name="description" content="Nitesh Rawal — Software Engineer II in Hyderabad building reliable Java, Spring Boot, microservices and AI-assisted systems.">
 <meta name="theme-color" content="#080b10">
 <meta name="color-scheme" content="dark light">
 <script>
 (function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",t==="light"?"#eef2f7":"#080b10");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();
 </script>
 
-<meta property="og:title" content="Nitesh Rawal — Java Backend Engineer">
-<meta property="og:description" content="Spring Boot microservices, event-driven systems, and the CI/CD + Kubernetes pipelines that ship them.">
+<meta property="og:title" content="Nitesh Rawal — Software Engineer II">
+<meta property="og:description" content="Software Engineer II building reliable Java, Spring Boot, microservices and AI-assisted systems.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,8 +26,9 @@
 </head>
 <body>
 
-<canvas id="bg"></canvas>
-<div class="grain"></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <nav id="dock" aria-label="Primary">
   <a href="#hero" data-k="hero" class="dk">
@@ -54,9 +55,10 @@
   <a href="#about" data-k="about">About</a>
   <a href="#experience" data-k="experience">Experience</a>
   <a href="#projects" data-k="projects">Projects</a>
-  <a href="#stack" data-k="stack">Platform</a>
+  <a href="#skills" data-k="skills">Skills</a>
+  <a href="#ai" data-k="ai">AI-assisted</a>
   <a href="#education" data-k="education">Education</a>
-  <a href="#personal" data-k="personal">Personal</a>
+  <a href="#hobbies" data-k="hobbies">Hobbies</a>
   <a href="#proof" data-k="proof">Awards</a>
   <a href="#contact" data-k="contact">Contact</a>
 </div>
@@ -65,15 +67,16 @@
 
   <section id="hero">
     <div class="container hero-grid">
-      <div>
-        <div class="boot" id="boot"></div>
+      <div class="hero-copy">
+        <div class="boot" id="boot" aria-hidden="true"></div>
         <h1 class="hero-name" id="heroName" aria-label="Nitesh Rawal"></h1>
         <div class="hero-role" id="heroRole"></div>
         <p class="hero-tag" id="heroTag"></p>
         <div class="hero-cta">
           <a class="btn primary" href="#contact">Get in touch</a>
-          <a class="btn" href="#experience">See the work →</a>
+          <a class="btn" href="#experience">See the work</a>
         </div>
+        <div class="hero-links" id="heroLinks"></div>
       </div>
       <div class="card3d">
         <div class="photo-frame" id="photoFrame">
@@ -88,66 +91,72 @@
 
   <section id="about">
     <div class="container">
-      <div class="statusline"><span class="dot"></span><b>MODULE 01</b>&nbsp;/ about</div>
-      <h2 class="h-sec reveal">What I actually do</h2>
-      <p class="h-sub reveal">The short version, for the Instagram-bio crowd and the recruiters alike.</p>
-      <div class="about-grid">
-        <p class="reveal" id="aboutText"></p>
-        <p class="reveal">I care about the parts of backend work that don't show up on a feature list: <b>observability</b>, <b>failure recovery</b>, and making a system someone else can operate at 2am without calling me. That's shown up as circuit breakers that cut failure rates by 80%+, a Jenkins pipeline cut from 18 minutes to 6, and a Kafka memory leak hunted down with Java Flight Recorder instead of guesswork.</p>
-      </div>
+      <div class="statusline"><span class="dot"></span><b>about</b></div>
+      <h2 class="h-sec reveal">About me</h2>
+      <p class="h-sub reveal">Java backend developer, five years in.</p>
+      <div class="about-grid" id="aboutGrid"></div>
     </div>
   </section>
 
   <section id="experience">
     <div class="container">
-      <div class="statusline"><span class="dot"></span><b>MODULE 02</b>&nbsp;/ experience</div>
-      <h2 class="h-sec reveal">Career log</h2>
-      <p class="h-sub reveal">Four roles, one thread: Java backends that have to hold up under real load.</p>
+      <div class="statusline"><span class="dot"></span><b>experience</b></div>
+      <h2 class="h-sec reveal">Experience</h2>
+      <p class="h-sub reveal">From a Java training internship in 2019 to Software Engineer II today.</p>
       <div class="tl" id="timeline"></div>
     </div>
   </section>
 
   <section id="projects">
     <div class="container">
-      <div class="statusline"><span class="dot"></span><b>MODULE 03</b>&nbsp;/ projects</div>
-      <h2 class="h-sec reveal">Systems I've built</h2>
-      <p class="h-sub reveal">Three platforms, from visa processing to banking credit systems to entitlement management.</p>
+      <div class="statusline"><span class="dot"></span><b>projects</b></div>
+      <h2 class="h-sec reveal">Professional projects</h2>
+      <p class="h-sub reveal">Systems built for scale, reliability and regulated enterprise workflows.</p>
       <div class="proj-grid" id="projects-grid"></div>
+      <h2 class="h-sec h-sec-2 reveal">Personal projects</h2>
+      <p class="h-sub reveal">Built independently to explore full-stack development, rules engines and applied AI.</p>
+      <div class="proj-grid" id="personal-grid"></div>
     </div>
   </section>
 
-  <section id="stack">
+  <section id="skills">
     <div class="container">
-      <div class="statusline"><span class="dot"></span><b>MODULE 04</b>&nbsp;/ platform</div>
-      <h2 class="h-sec reveal">The full stack — code to cluster</h2>
-      <p class="h-sub reveal">Backend language and framework depth, paired with the DevOps, reliability and AI-assisted delivery layer that ships it.</p>
-      <div class="stack-grid" id="stack-grid"></div>
-      <div class="meters" id="meters"></div>
+      <div class="statusline"><span class="dot"></span><b>skills</b></div>
+      <h2 class="h-sec reveal">Skills</h2>
+      <p class="h-sub reveal">Technologies and tools I use to design, build, test and deliver production-ready software. Levels are self-assessed.</p>
+      <div class="skill-grid" id="skill-grid"></div>
+      <div class="skill-tags reveal" id="skill-tags"></div>
+    </div>
+  </section>
+
+  <section id="ai">
+    <div class="container">
+      <div class="statusline"><span class="dot"></span><b>ai-assisted development</b></div>
+      <div class="ai-card" id="ai-card"></div>
     </div>
   </section>
 
   <section id="education">
     <div class="container">
-      <div class="statusline"><span class="dot"></span><b>MODULE 05</b>&nbsp;/ education</div>
+      <div class="statusline"><span class="dot"></span><b>education</b></div>
       <h2 class="h-sec reveal">Education</h2>
       <div class="edu-grid" id="edu-grid"></div>
     </div>
   </section>
 
-  <section id="personal">
+  <section id="hobbies">
     <div class="container">
-      <div class="statusline"><span class="dot"></span><b>MODULE 06</b>&nbsp;/ personal</div>
-      <h2 class="h-sec reveal">Built independently</h2>
-      <p class="h-sub reveal">Side projects exploring full-stack development, rules engines and applied AI — plus what keeps me going outside of work.</p>
-      <div class="proj-grid" id="personal-grid"></div>
-      <h3 class="h-hobby reveal">Discipline in the gym. Competition on the field. Curiosity everywhere.</h3>
+      <div class="statusline"><span class="dot"></span><b>hobbies</b></div>
+      <h2 class="h-sec reveal">Hobbies</h2>
+      <p class="h-sub reveal">What keeps me active, competitive and curious outside of work.</p>
+      <p class="hobby-quote reveal" id="hobbyQuote"></p>
       <div class="hobby-row" id="hobby-row"></div>
     </div>
   </section>
 
   <section id="proof">
     <div class="container">
-      <div class="statusline"><span class="dot"></span><b>MODULE 07</b>&nbsp;/ proof</div>
+      <div class="statusline"><span class="dot"></span><b>awards &amp; certifications</b></div>
       <h2 class="h-sec reveal">Awards &amp; certifications</h2>
       <div class="proof-grid" id="proof-grid"></div>
     </div>
@@ -155,14 +164,34 @@
 
   <section id="contact">
     <div class="container">
-      <div class="contact-box reveal">
-        <div class="statusline" style="justify-content:center"><span class="dot"></span><b>MODULE 08</b>&nbsp;/ contact</div>
-        <h2>Let's build something that stays up.</h2>
-        <p>Open to backend, platform and DevOps-leaning roles. The fastest way to reach me is email.</p>
-        <div class="contact-links" id="contactLinks"></div>
+      <div class="statusline"><span class="dot"></span><b>contact</b></div>
+      <h2 class="h-sec reveal">Contact me</h2>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Let's build something useful</h3>
+          <p class="c-sub">Have a project, technical discussion, collaboration idea, or just want to connect? Send me a message.</p>
+          <form id="contact-form" name="c-form" novalidate>
+            <div class="field"><label for="first_name">Name</label><input id="first_name" type="text" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+            <div class="field"><label for="sub">Subject</label><input id="sub" type="text" name="subject" required></div>
+            <div class="field"><label for="textarea1">Message</label><textarea id="textarea1" name="message" rows="5" required></textarea></div>
+            <button id="submit" name="contactSubmit" type="submit" class="btn primary">Send message</button>
+            <div id="contact-status" class="contact-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+        <div class="contact-side">
+          <h3>Connect with me</h3>
+          <p class="c-sub">I'm always open to meaningful conversations around backend engineering, distributed systems, AI-assisted development and technology.</p>
+          <ul class="c-list">
+            <li><small>Email</small><a href="mailto:nitesh.rawal401@gmail.com">nitesh.rawal401@gmail.com</a></li>
+            <li><small>LinkedIn</small><a href="https://www.linkedin.com/in/nitesh-rawal-50923b199/" target="_blank" rel="noopener">linkedin.com/in/nitesh-rawal</a></li>
+            <li><small>GitHub</small><a href="https://github.com/nitesh401" target="_blank" rel="noopener">github.com/nitesh401</a></li>
+            <li><small>Location</small><span>Hyderabad, Telangana, India</span></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <footer>© <span id="yr"></span> Nitesh Rawal · built with Three.js · deployed on GitHub Pages</footer>
+    <footer>© <span id="yr"></span> Nitesh Rawal</footer>
   </section>
 
 </main>
