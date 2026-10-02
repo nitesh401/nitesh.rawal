@@ -357,3 +357,19 @@ section{padding:64px 0}
 }
 /* short landscape phones: don't force a full-height hero */
 @media(max-height:560px){ #hero{min-height:auto} }
+
+/* ---------- lens flare ghosts, and the fallback when WebGL is unavailable ---------- */
+.fg{position:fixed; left:0; top:0; z-index:1; pointer-events:none; border-radius:50%; mix-blend-mode:screen; opacity:0; will-change:transform,opacity}
+:root[data-theme="light"] .fg{display:none}
+body.no-webgl::after{
+  content:''; position:fixed; z-index:0; pointer-events:none; width:72vmin; height:72vmin; right:-16vmin; bottom:-20vmin; border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.12), transparent 50%), url(../assets/earth/day_1k.jpg) 30% 50%/220% auto no-repeat, #05070b;
+  box-shadow:inset -9vmin -6vmin 12vmin rgba(0,0,0,.92), 0 0 7vmin rgba(90,150,255,.28);
+}
+#bg{display:block}
+body.no-webgl #bg{display:none}
+/* older browsers without the inset shorthand */
+@supports not (inset:0){
+  body::before,.vignette,.grain,#scrim{top:0; right:0; bottom:0; left:0}
+}
+@media (prefers-reduced-motion: reduce){ .fg{display:none} .fl{transform:none !important} }
