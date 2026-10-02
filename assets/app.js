@@ -108,6 +108,7 @@
         body: JSON.stringify({ name: name, email: email, subject: subject, message: message })
       }).then(function(resp){
         if (resp.ok){
+	if (window.gtag) gtag('event', 'contact_form_submit');
           status.className = 'contact-status'; status.style.display = 'block';
           status.textContent = "Thanks — your message was sent. I'll reply to you at " + email + '.';
           submit.textContent = 'Sent ✓';
