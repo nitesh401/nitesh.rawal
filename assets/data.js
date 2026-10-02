@@ -91,7 +91,11 @@ const PERSONAL_PROJECTS = [
     stack: ['Java', 'Spring Boot', 'H2 DB', 'JUnit', 'Maven'], url: 'https://github.com/nitesh401/RMS' },
   { name: 'Isolation AI Game Agent', sub: 'Personal project',
     d: 'Isolation is a deterministic two-player game of perfect information: players alternate moving a piece, every visited cell becomes blocked, and the first player with no legal move loses. This agent plays it using adversarial search.',
-    stack: ['Java', 'Java AWT & Spring', 'Alpha-Beta Pruning', 'Iterative Deepening Search', 'MiniMax'], url: 'https://github.com/nitesh401/IsolationAIgameAgent' }
+    stack: ['Java', 'Java AWT & Spring', 'Alpha-Beta Pruning', 'Iterative Deepening Search', 'MiniMax'], url: 'https://github.com/nitesh401/IsolationAIgameAgent' },
+  { name: 'Real-time Event Detection in Twitter', sub: 'Personal project',
+    d: 'Detects real-world events from Twitter data using an entity-based approach. Tweets are cleaned, entities are extracted and filtered, similarity between entities is computed and filtered, an entity graph is built, and the graph is clustered and chained into events.',
+    stack: ['Python', 'Entity extraction', 'Entity graph', 'Clustering', 'Twitter data'],
+    url: 'https://github.com/nitesh401/RealTimeEventDetectionInTwitter' }
 ];
 
 const EDUCATION = [
