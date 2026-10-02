@@ -75,6 +75,14 @@ const PROJECTS = [
 ];
 
 const PERSONAL_PROJECTS = [
+  { name: 'Production Bug Minimal Reproduction Finder', sub: 'Personal project',
+    d: 'Given a failing production request, it automatically finds the smallest subset of input and state that still reproduces the bug. It uses delta debugging (ddmin) with dependency-aware reduction (Tarjan SCC), caching and pruning, distributed over Kafka across five Spring Boot microservices around a Spring-free algorithm core.',
+    stack: ['Java', 'Spring Boot', 'Apache Kafka', 'MySQL', 'Redis', 'Docker', 'Maven'],
+    url: 'https://github.com/nitesh401/Production-Bug-Minimal-Reproduction-Finder' },
+  { name: 'DispatchIQ — Real-time Delivery Dispatch Platform', sub: 'Personal project',
+    d: 'Assigns every incoming delivery order to the right courier in real time using traffic-aware routing, without double-booking a courier, and keeps working when a dependency fails. Four Spring Boot services (courier, routing, order, API gateway) with an Angular UI, built on hand-written QuadTree, A*/Dijkstra, the Hungarian algorithm, a circuit breaker and a token-bucket rate limiter.',
+    stack: ['Java 21', 'Spring Boot', 'Spring Cloud Gateway', 'Angular 17', 'H2 + JPA', 'Maven'],
+    url: 'https://github.com/nitesh401/DispatchIQ-real-time-delivery-dispatch-platform' },
   { name: 'Open-Meteo', sub: 'learningdev',
     d: 'A Spring Boot sample that resolves a location to coordinates, fetches current weather from Open-Meteo, enriches the payload and stores the result in an in-memory H2 database, with a simple Bootstrap UI.',
     stack: ['Java', 'Spring Boot', 'Open-Meteo', 'H2 Database', 'Bootstrap'], url: 'https://github.com/nitesh401/Open-Meteo' },
