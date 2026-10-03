@@ -75,6 +75,11 @@ const PROJECTS = [
 ];
 
 const PERSONAL_PROJECTS = [
+  { name: 'AutoRemediate AI — Sonar & Snyk Findings Agent', sub: 'Personal project',
+    d: 'An AI agent that analyzes and fixes findings reported by SonarQube and Snyk, automating parts of code-quality and security remediation.',
+    stack: [],
+    url: 'https://github.com/nitesh401/AutoRemediate-AI',
+    articleUrl: 'https://dev.to/nitesh401/i-built-an-ai-agent-that-fixes-sonar-and-snyk-findings-3k41' },
   { name: 'Production Bug Minimal Reproduction Finder', sub: 'Personal project',
     d: 'Given a failing production request, it automatically finds the smallest subset of input and state that still reproduces the bug. It uses delta debugging (ddmin) with dependency-aware reduction (Tarjan SCC), caching and pruning, distributed over Kafka across five Spring Boot microservices around a Spring-free algorithm core.',
     stack: ['Java', 'Spring Boot', 'Apache Kafka', 'MySQL', 'Redis', 'Docker', 'Maven'],

@@ -55,8 +55,10 @@
   });
   PERSONAL_PROJECTS.forEach(function(p){
     var el = document.createElement('div'); el.className = 'proj reveal fl';
-    el.innerHTML = '<div class="pk">PERSONAL</div><h3>'+esc(p.name)+'</h3><div class="sub">'+esc(p.sub)+'</div><p class="what">'+esc(p.d)+'</p>' + chips(p.stack) +
-      '<a class="btn" style="margin-top:16px" href="'+esc(p.url)+'" target="_blank" rel="noopener">View on GitHub →</a>';
+    el.innerHTML = '<div class="pk">PERSONAL</div><h3>'+esc(p.name)+'</h3><div class="sub">'+esc(p.sub)+'</div><p class="what">'+esc(p.d)+'</p>' +
+      (p.stack.length ? chips(p.stack) : '') +
+      '<a class="btn" style="margin-top:16px" href="'+esc(p.url)+'" target="_blank" rel="noopener">View on GitHub →</a>' +
+      (p.articleUrl ? ' <a class="btn" style="margin:16px 0 0 8px" href="'+esc(p.articleUrl)+'" target="_blank" rel="noopener">Read article →</a>' : '');
     $('personal-grid').appendChild(el);
   });
 
