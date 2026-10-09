@@ -3,8 +3,8 @@
 Personal portfolio of **Nitesh Rawal**, Software Engineer II (Java backend) in Hyderabad.
 Plain HTML, CSS and JavaScript. No build step, no framework, no npm install. The background is a live 3D Earth rendered with [Three.js](https://threejs.org) (r128, loaded from cdnjs).
 
-- Live site: https://nitesh401.github.io/nitesh.rawal/
-- Previous site: https://niteshrawal.is-a.dev/
+- github page: https://nitesh401.github.io/nitesh.rawal/
+-  live site: https://niteshrawal.is-a.dev/
 
 ## What it does
 
