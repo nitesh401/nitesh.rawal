@@ -9,7 +9,7 @@ const PROFILE = {
   location: 'Hyderabad, Telangana, India',
   employer: 'Deloitte USI',
   email: 'nitesh.rawal401@gmail.com',
-  photo: 'assets/hero.jpg',
+  photo: 'assets/hero.jpeg',
   links: {
     LinkedIn: 'https://www.linkedin.com/in/nitesh-rawal-50923b199/',
     GitHub: 'https://github.com/nitesh401',
@@ -113,12 +113,13 @@ const EDUCATION = [
 
 // Same groups and self-assessed levels as the previous portfolio.
 const SKILL_GROUPS = [
-  { name: 'Programming', items: [['Java', 90]] },
-  { name: 'Backend & Frameworks', items: [['Spring Boot', 90], ['Spring Security', 80], ['Spring MVC', 80], ['Spring WebFlux', 70], ['JUnit', 80]] },
-  { name: 'Frontend', items: [['HTML', 80], ['JavaScript', 60], ['React.js', 40], ['CSS', 30]] },
-  { name: 'Databases', items: [['MySQL', 90], ['PostgreSQL', 80], ['Oracle DB', 75]] },
-  { name: 'Architecture & APIs', items: [['Microservices', 85], ['REST API', 85], ['Apache Kafka', 75], ['GraphQL', 50], ['Docker & Kubernetes', 65]] },
-  { name: 'Tools & AI', items: [['IntelliJ IDEA', 90], ['Postman', 90], ['Git', 80], ['GitHub', 70], ['Claude Code', 70]] }
+  { name: 'Programming', items: [['Java', 95]] },
+  { name: 'Backend & Frameworks', items: [['Spring Boot', 95], ['Spring Security', 90], ['Spring AI', 70], ['Spring MVC', 90], ['Spring WebFlux', 90], ['Spring AOP', 90], ['Hibernate', 90], ['JDBC', 90], ['JUnit', 100], ['Mockito', 100]] },
+  { name: 'Frontend', items: [['HTML', 90], ['JavaScript', 80], ['React.js', 70], ['CSS', 80], ['React Native', 50]] },
+  { name: 'Databases', items: [['MySQL', 90], ['PostgreSQL', 80], ['MongoDB', 70], ['Oracle DB', 75]] },
+  { name: 'Architecture & APIs', items: [['Microservices', 85], ['gRPC', 75], ['GraphQL', 80], ['REST API', 85], ['Apache Kafka', 85], ['AWS SQS', 75]] },
+  { name: 'DevOps & Cloud', items: [['Docker', 80], ['Kubernetes', 85], ['ArgoCD', 80], ['AWS', 80], ['AZURE', 80]] },
+  { name: 'Tools & AI', items: [['Jenkins', 90], ['IntelliJ IDEA', 100], ['VS code', 100], ['Postman', 90], ['Git', 80], ['GitHub', 70], ['Claude Code', 90], ['Github Copilot', 90], ['Codex', 80]] }
 ];
 const SKILL_TAGS = ['Clean code', 'Security-minded', 'Test-driven', 'Delivery-focused'];
 

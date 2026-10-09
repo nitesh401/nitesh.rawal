@@ -23,7 +23,7 @@ index.html          page structure, meta tags, <noscript> fallback
 assets/style.css    design system: dark + light tokens, layout, mobile-first breakpoints
 assets/data.js      ALL content (experience, projects, skills, education, hobbies, awards)
 assets/app.js       rendering, theme, dock, contact form, Earth scene and scroll camera
-assets/hero.jpg     profile photo
+assets/hero.jpeg    profile photo
 assets/earth/       Earth and Moon textures (1k for phones, 2k for larger screens)
 ```
 
