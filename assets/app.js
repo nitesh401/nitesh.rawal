@@ -61,6 +61,29 @@
       (p.articleUrl ? ' <a class="btn" style="margin:16px 0 0 8px" href="'+esc(p.articleUrl)+'" target="_blank" rel="noopener">Read article →</a>' : '');
     $('personal-grid').appendChild(el);
   });
+  (function animatePersonalCards(){
+    var rail = $('personal-grid');
+    if (reduced || !rail) return;
+    var frame = 0;
+    function update(){
+      frame = 0;
+      var center = rail.getBoundingClientRect().left + rail.clientWidth / 2;
+      Array.prototype.forEach.call(rail.querySelectorAll('.proj'), function(card){
+        var rect = card.getBoundingClientRect(), width = rect.width || 1;
+        var distance = Math.max(-1.25, Math.min(1.25, (rect.left + width / 2 - center) / width));
+        var offset = Math.abs(distance);
+        card.style.setProperty('--scroll-turn', (-distance * 9).toFixed(2) + 'deg');
+        card.style.setProperty('--scroll-lift', (offset * 10).toFixed(2) + 'px');
+        card.style.setProperty('--scroll-scale', (1 - offset * 0.045).toFixed(3));
+      });
+    }
+    function requestUpdate(){
+      if (!frame) frame = requestAnimationFrame(update);
+    }
+    rail.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    requestUpdate();
+  })();
 
   SKILL_GROUPS.forEach(function(g){
     var el = document.createElement('div'); el.className = 'skill-card reveal fl';
